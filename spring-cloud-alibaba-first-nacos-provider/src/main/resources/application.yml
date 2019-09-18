@@ -5,9 +5,13 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
-
+  datasource:
+    username: root
+    password: root1234
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8
+    type: com.alibaba.druid.pool.DruidDataSource
 server:
-  port: 8080
+  port: 8081
 
 management:
   endpoints:

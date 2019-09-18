@@ -1,7 +1,5 @@
-package com.zhengyj.spring.cloud.alibaba.nacos.provider.entity;
+package com.zhengyj.spring.cloud.alibaba.nacos.consumer.entity;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
 
@@ -11,16 +9,14 @@ import java.io.Serializable;
  * @description: 用户实体类
  *
  */
-@ApiModel
-public class Users {
+public class Users implements Serializable {
 
-    @ApiModelProperty("用户id")
+
+    private static final long serialVersionUID = 9061240406537771864L;
+
     private Integer id;
-    @ApiModelProperty("用户名")
     private String username;
-    @ApiModelProperty("密码")
     private String password;
-    @ApiModelProperty("编码")
     private String code;
 
     public Users(Integer i, String s, String s1) {
@@ -69,5 +65,13 @@ public class Users {
         this.code = code;
     }
 
-
+    @Override
+    public String toString() {
+        return "Users{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", code='" + code + '\'' +
+                '}';
+    }
 }
